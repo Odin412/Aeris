@@ -1,0 +1,14 @@
+node_modules
+.npm
+.env
+.env.local
+.env.*
+dist
+build
+.expo
+.expo-shared
+.idea
+.vscode
+.DS_Store
+coverage
+.prisma

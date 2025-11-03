@@ -1,0 +1,15 @@
+{
+  "name": "aeris",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": ["api", "frontend", "mobile", "shared"],
+  "scripts": {
+    "dev": "npm run dev --workspace api",
+    "dev:web": "npm run dev --workspace frontend",
+    "dev:mobile": "npm run start --workspace mobile",
+    "test": "npm run test --workspace api",
+    "lint": "npm run lint --workspace api",
+    "build": "npm run build --workspace api",
+    "prisma:generate": "npm run prisma:generate --workspace api"
+  }
+}
