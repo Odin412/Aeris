@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aeris Control Center</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Aeris — Intelligent Real Estate OS</h1>
+      <p class="tagline">Powered by TitanAI · Multi-tenant brokerage platform</p>
+    </header>
+
+    <main>
+      <section class="status" id="health">
+        <h2>Platform Health</h2>
+        <button id="health-check">Run Health Check</button>
+        <pre id="health-result">Waiting…</pre>
+      </section>
+
+      <section class="grid">
+        <article>
+          <h3>Tenant Setup</h3>
+          <form id="tenant-form">
+            <label>
+              Name
+              <input type="text" name="name" value="Atlas Realty" required />
+            </label>
+            <label>
+              Domain
+              <input type="text" name="domain" value="atlas.example.com" required />
+            </label>
+            <button type="submit">Create Tenant</button>
+          </form>
+          <div class="result" id="tenant-result"></div>
+        </article>
+
+        <article>
+          <h3>CRM Lead Capture</h3>
+          <form id="lead-form">
+            <label>
+              Name
+              <input type="text" name="name" value="Jamie Client" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" value="jamie@example.com" required />
+            </label>
+            <label>
+              Phone
+              <input type="tel" name="phone" value="555-1000" />
+            </label>
+            <button type="submit">Create Lead</button>
+          </form>
+          <div class="result" id="lead-result"></div>
+        </article>
+
+        <article>
+          <h3>Marketplace Search</h3>
+          <form id="search-form">
+            <label>
+              City
+              <input type="text" name="city" value="Austin" />
+            </label>
+            <label>
+              Type
+              <select name="type">
+                <option value="buy">Buy</option>
+                <option value="rent">Rent</option>
+                <option value="invest">Invest</option>
+              </select>
+            </label>
+            <button type="submit">Run Search</button>
+          </form>
+          <div class="result" id="search-result"></div>
+        </article>
+      </section>
+
+      <section class="ai-console">
+        <h3>TitanAI Assistant</h3>
+        <form id="assistant-form">
+          <input type="text" name="prompt" placeholder="Ask TitanAI (e.g. Deal status for Jamie Client)" required />
+          <button type="submit">Send</button>
+        </form>
+        <pre id="assistant-log"></pre>
+      </section>
+    </main>
+
+    <footer>
+      <small>© 2025 Aeris. Powered by TitanAI.</small>
+    </footer>
+
+    <script src="scripts/app.js" type="module"></script>
+  </body>
+</html>
